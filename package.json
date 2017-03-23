@@ -1,30 +1,42 @@
 {
-  "name": "libreoffice-convert",
-  "version": "0.0.3",
+  "name": "libreconv",
+  "version": "0.1.0",
   "description": "A simple and fast node.js module for converting office documents to different formats",
-  "main": "index.js",
-  "repository": "https://github.com/elwerene/libreoffice-convert",
+  "main": "lib/index.js",
+  "bin": {
+    "libreconv": "./bin/libreconv"
+  },
+  "repository": "https://github.com/taoyuan/libreconv",
   "keywords": [
-    "Libreoffice",
+    "libreoffice",
+    "libre",
+    "soffice",
+    "office",
     "convert",
     "Excel",
     "Word",
     "xlsx",
     "xls",
     "doc",
-    "docx"
+    "docx",
+    "pdf"
   ],
   "contributors": [
+    "Yuan Tao <towyuan@outlook>",
     "René Rössler <rene@freshx.de>"
   ],
   "license": "MIT",
   "dependencies": {
-    "temp": "~0.7.0",
-    "async": "^0.2.10"
+    "bluebird": "^3.5.0",
+    "caporal": "^0.3.0",
+    "child-process-promise": "^2.2.0",
+    "debug": "^2.6.3",
+    "fs-extra": "^2.1.2",
+    "tmp": "0.0.31"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^3.2.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
